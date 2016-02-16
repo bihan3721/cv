@@ -1,0 +1,346 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009-2012 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black 
+    %urlcolor=mygreylink     % can put red here to better visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.40}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubsubheading}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE Bihan Jiang}} & \href{mailto:bhj09@imperial.ac.uk}{bhj09@imperial.ac.uk}\\
+	%{\footnotesize \texttt{\colorbox{yellow}{[web version:  address \& phone omitted]}}} & \href{www.doc.ic.ac.uk/~bhj09}{www.doc.ic.ac.uk/~bhj09} \\
+{ \texttt{{180 Queen's Gate, Imperial College London, UK. SW7 2RH}}} & {+447861457507} \\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\begin{comment}
+\resheading{Research Interests}
+{\small
+\begin{itemize}
+\item \textbf{Machine learning:} Support Vector Machines; Artificial Neural Networks; Hidden Markov Models (HMMs); Regression; Clustering; Bayesian inference; Dimensionality reduction algorithms; Deep learning 
+
+\item \textbf{Feature extraction:} Gabor filters; Local Binary Patterns (LBPs); Local Phase Quantization (LPQ); Scale-invariant Feature transform (SIFT); spatio-temporal extensions of texture descriptors  
+ 
+\item \textbf{Automatic human (facial) behaviour analysis:} Emotion recognition; facial action unit recognition; affective analysis (i.e. valence/arousal); spatio-temporal alignment; social signal processing 
+\end{itemize}
+}
+%\end{comment}
+
+\resheading{Education}
+	\begin{itemize}
+		\item
+			\ressubheading{{Imperial College London}}{London, UK}{{PhD in Computer Science}; }{Oct. 2010 -- Oct. 2014 (expected)}
+				{ \small
+				\begin{itemize}
+					\resitem{Research focus: developing and applying computer vision and pattern recognition approaches to automatic human (social) behaviour analysis, in particular facial expression analysis }
+					\resitem{Thesis title: Spatial and temporal analysis of facial actions }
+
+					\resitem{To date there are \textbf{7} papers published and presented at conferences and journals which have led to more than \textbf{200} citations (according to Google Scholar) } 
+				\end{itemize}
+				}
+		\item
+			\ressubheading{{Imperial College London}}{London, UK}{{MSc in Computing Science}; Distinction (76.7\%) }{Oct. 2009 -- Sept 2010}
+				{ \small
+				\begin{itemize}
+				\resitem{Main Modules: Object-Orientated Programming, Machine Learning, Concurrency, Databases, Software Engineering and Computer Systems}
+				\resitem{Thesis title: A comparison and investigation of dense temporal appearance descriptors for AU analysis}
+				\end{itemize}
+				}
+		\item
+			\ressubheading{{University of Central Lancashire}}{Preston, UK}{{BEng in Digital Signal \& Image Processing}; First class (86\%) }{Sept. 2006 -- May 2009}
+				{ \small
+				\begin{itemize}
+				\resitem{Main modules: Data Communication, Digital Signal Processing, Digital Image Processing, Artificial Neural Networks, Computer Vision and Mathematics}
+				\resitem{Thesis title: A real-time system for automatic emotion recognition}
+				\resitem{Ranked 1st out of 73 students on the course}
+				\end{itemize}
+				}
+	\end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+	\begin{itemize}
+		\item 
+			\ressubheading{{Imperial College London}}{London, UK}
+				{Research assistant}{Oct. 2010 -- Present}
+				{ \small
+				\begin{itemize}
+					%\resitem{Proposed a novel feature extraction method which can capture spatio-temporal appearance changes}
+					%\resitem{Detected temporal dynamics of facial actions using a hybrid of SVMs and HMMs }
+					%\resitem{Proposed a novel paramatric temporal warping alorithm for temporal alignment of facial behaviours }
+					%\resitem{Designed a baseline system for the Facial Expression Recognition and Analysis Challenge (FERA2011) and the Continuous Audio/Visual Emotion and Depression Recognition Challenge (AVEC2013)}
+				
+					\resitem{Employed by European Commission on the Social Signal Processing Network (SSPNet) project and British Research Council on the Analysis of Facial Behaviour for Security in 4D (4D-FAB) project}
+					\resitem{Developed tools in MATLAB and C++ for automatic facial behaviour analysis}
+					\resitem{4D Facial Expression Database processing and FACS annotation}
+					%\resitem{Published and presented (oral or poster) a number of high quality conference and journal papers}
+
+					\resitem{Attended the MIT-Imperial Collaborative Research Development Course}
+					\resitem{Attended the Facial Action Coding System (FACS) workshop (by Erika Rosenberg)}
+				\end{itemize}
+				}
+
+			\ressubsubheading{Teaching assistant}{Oct. 2011 -- present}
+				{ \small
+				\begin{itemize}
+					\resitem{Tutorial helping, marking and invigilation for various undergraduate and postgraduate modules such as Machine Learning and Software Engineering}
+					\resitem{Lab demonstrator for C++, Java and MATLAB}
+				\end{itemize}
+				}
+
+			\ressubsubheading{MSc group project}{Mar. 2010 -- Sept. 2010}
+				{ \small
+				\begin{itemize}
+					\resitem{Used a high-precision 3D location tracking system provided by Ubisense to create an audio-visual interactive art installation which encouraged human-human interaction}
+					\resitem{Implemented in C\# (Ubisense) and Java, and built a connection between them via socket}
+					\resitem{Worked in a team and interacted with client (a Danish artist Tine Bech)}
+				\end{itemize}
+				}
+
+		\item			
+			\ressubheading{Oregon State University}{Corvallis, OR}{Visiting scholar}{Jul. 2013 -- Oct. 2013}
+				{ \small			
+				\begin{itemize}
+					\item Applied novel deep learning techniques to facial expression analysis
+					\item Implemented machine learning techniques in MATLAB and Java
+				\end{itemize}
+				}
+	
+%		\item			
+%			\ressubheading{Entrepreneurial Experience}{Billings, MT}{On Site Computer Tech Support}{Jan. 2004 -- May 2005}
+%				{ \footnotesize				
+%				\begin{itemize}
+%					\item Initiated a freelance computer tech support business which provided the community with affordable, on-site computer service, consultation, and training
+%				\end{itemize}
+%				}
+
+	\end{itemize}  % End Experience list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\resheading{Leadership \& Activities                                                                                          }
+	\begin{itemize}
+		\item 
+			\ressubheading{{Imperial College London}}{London, UK}
+				{Project leader -- Bubble tea commercial project}{Oct.~2011 -- Oct.~2012}
+				{ \small
+				\begin{itemize}
+					\resitem{Collaborated with the Imperial College catering team to allow the sale of bubble tea on campus}
+					\resitem{Conducted market research to understand the demand for the bubble tea  }
+					%\resitem{Proposed marketing plans to build customer awareness and grow sales}
+				\end{itemize}
+				}
+
+			\ressubsubheading{Sponsorship Liaison Team leader -- ICCA Drama society}{Oct.~2010 -- Mar.~2011}
+				{ \small
+				\begin{itemize}
+					\resitem{Led a team of 10 people and fundraised more than £1000 sponsorship }
+					\resitem{Identified potential funding sources, worked closely with the marketing and finance team to prepare necessary material (e.g., brochure and budge plan), and distributed tasks to team members }
+				\end{itemize}
+				}
+
+			\ressubsubheading{Committee member -- Imperial Consulting Group}{Oct.~2012 -- Mar.~2013}
+				{ \small
+				\begin{itemize}
+					\resitem{One of the founding members of the Imperial Consulting Group}
+					\resitem{Involved with the setup of the group including website development, logo design and project hunting}
+				\end{itemize}
+				}
+	
+	\ressubsubheading{Volunteer -- IntoUniversity}{Oct.~2010 -- Jun.~2011}
+				{ \small
+				\begin{itemize}
+					\resitem{Acted as a role model, supported academic progress and provided inspiration and encouragement to young people for whom university education is not necessarily a common expectation}
+					
+				\end{itemize}
+				}
+
+		\item			
+			\ressubheading{University of Central Lancashire}{Preston, UK}{Course representative}{Oct.~ 2006 -- July.~2009}
+				{ \small			
+				\begin{itemize}
+					\item Acted as liaison between course peers and various staffs
+					\item Coordinated and presented essential feedback to the university
+				\end{itemize}
+				}
+	
+%		\item			
+%			\ressubheading{Entrepreneurial Experience}{Billings, MT}{On Site Computer Tech Support}{Jan. 2004 -- May 2005}
+%				{ \footnotesize				
+%				\begin{itemize}
+%					\item Initiated a freelance computer tech support business which provided the community with affordable, on-site computer service, consultation, and training
+%				\end{itemize}
+%				}
+
+	\end{itemize}  % End Experience list
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{comment}
+\resheading{{Publications}}
+%\vspace{1cm}
+\textit{Journal articles:}
+	\begin{itemize}
+{ \small
+\item \textbf{Bihan Jiang}, Brais Martinez, Michel F. Valstar, and Maja Pantic, Automatic Analysis of Facial Actions: A Survey, International Journal of Computer Vision, under review, 2014 (IF2012 3.623). 
+
+\item \textbf{Bihan Jiang}, Michel Valstar, Brais Martinez, and Maja Pantic, A Dynamic Appearance Descriptor Approach to Facial Actions Temporal Modelling, IEEE Transactions on Cybernetics, 2014 (IF2012: 3.236).
+
+\item Michel F. Valstar, Marc Mehu, \textbf{Bihan Jiang}, Maja Pantic and Klaus Scherer. Meta-Analysis of the first Facial Expression Recognition Challenge, IEEE Transactions on Cybernetics, 42(4), 2012 (IF2012: 3.236). 
+}
+\end{itemize}
+\textit{Conference papers:}
+	\begin{itemize}
+{ \small
+\item \textbf{Bihan Jiang}, Brais Martinez, and Maja Pantic, Parametric temporal alignment for the detection of facial action temporal segments, British Machine Vision Conference, accepted, 2014. 
+
+\item \textbf{Bihan Jiang}, Brais Martinez, Michel F. Valstar, and Maja Pantic, Decision Level Fusion of Domain Specific Regions for Facial Action Recognition, Proc. Int'l Conf. Pattern Recognition, 2014.
+
+\item Michel F. Valstar, Bjorn Schuller, Kirsty Smith, Florian Eyben, \textbf{Bihan Jiang}, etc,  'AVEC 2013 - The Continuous Audio/Visual Emotion and Depression Recognition Challenge', Proc. Int'l Conf. ACM Multimedia, 2013
+\item \textbf{Bihan Jiang}, Michel F. Valstar, and Maja Pantic, Facial Action Recognition using sparse appearance descriptors and their pyramid representations, proc. ASE/IEEE Int'l conf on Social Computing, 2012. 
+\item \textbf{Bihan Jiang}, Michel F. Valstar, and Maja Pantic, Action Unit detection using sparse appearance descriptors in space-time video volumes, Proc. Int'l Conf. Face and Gesture Recognition, pp. 314 - 321, 2011.
+\item Michel F. Valstar, \textbf{Bihan Jiang}, Marc Méhu, Maja Pantic, and Klaus Scherer, The First Facial Expression Recognition and Analysis Challenge, Proc. Int'l Conf. Face and Gesture Recognition, pp. 921 - 926, 2011.
+}	
+\end{itemize}
+%\textit{Papers under review:}
+%\begin{itemize}
+%{ \small
+
+%}
+%\end{itemize}
+%\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{{Skills}}
+	\begin{description}
+{\small
+		\item[Languages:] {Fluent in English and Cantonese, Native in Mandarin}
+		\item[Technologies:] {  MATLAB, C++, Java,
+			Prolog, MySQL, HTML, CSS, SVN, Git
+		}
+		\item[Libraries:] { OpenCV, Boost, Eigen, libsvm, spider			
+		}
+}
+	\end{description} % End Skills list
+
+
+%\begin{comment}
+\resheading{Academic services
+                                                                              }
+{\small
+	\begin{description}
+		\item[Journal review:] \mbox{}\\
+				%\textbf{Journal review:}\\ 
+			\vspace{-0.2cm}
+			\begin{itemize}
+			\item 	Journal of Machine Vision and Applications; 
+			\end{itemize}
+		\vspace{-0.2cm}
+	    \item[Program committee:] \mbox{}\\
+	    			\vspace{-0.2cm}
+			\begin{itemize}
+			\item British Machine Vision Conference 2014
+			\item ACM International Conference on Multimodal Interaction 2013, 2014
+			%\item IEEE International Conference on Multimedia and Expo 2013
+			\end{itemize}
+	\end{description}  % End Experience list
+}
+%\end{comment}
+
+\begin{comment}
+\resheading{Leadership \& Activities     
+                                                                              }
+{\small
+	\begin{description}
+		\item[Student societies:] Imperial College Consultancy Society; Imperial College Chinese Drama Society; Imperial College SIFE society;
+		\item [Volunteers:] PDSA charity organisation; IntoUniversity;  
+	\end{description}  % End Experience list
+}
+\end{comment}
+
+%\begin{comment}
+\resheading{Collaborators}
+
+\begin{description}
+{\small
+\item {MSc/PhD supervisor: \textbf{Prof.~Maja Pantic}, Imperial College London}
+
+\item {Research mentor:  \textbf{Dr.~Michel Valstar}, University of Nottingham}
+%\item {Research mentor: \textbf{Dr.~Brais Martinez}, Imperial College London}
+\item {Summer placement mentor: \textbf{Dr.~Sinisa Todorovic}, Oregon State University}
+\item {BEng project supervisor: \textbf{Prof.~Bogdan J. Matuszewski}, University of Central Lancashire}
+}
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+%\end{comment}
+\end{document}
+
+
+
